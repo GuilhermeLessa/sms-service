@@ -34,14 +34,14 @@
 			"response": []
 		},
 		{
-			"name": "[PEP]/sms/send",
+			"name": "[API]/sms/send",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "{{PEP_BEARER_TOKEN}}",
+							"value": "{{API_BEARER_TOKEN}}",
 							"type": "string"
 						}
 					]
@@ -130,7 +130,7 @@
 			"type": "string"
 		},
 		{
-			"key": "PEP_BEARER_TOKEN",
+			"key": "API_BEARER_TOKEN",
 			"value": "",
 			"type": "string"
 		}

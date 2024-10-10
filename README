@@ -1,5 +1,5 @@
 
-Its only a simple example implementation of a sms sender that I've created in an legacy project. It was used Symfony framework and consumed a Brazilian web service http://twwwireless.com.br/. I decided extract the code and put it here.
+Its only a simple sms sender that I've created in an legacy project. It was used Symfony framework and consumed a Brazilian web service http://twwwireless.com.br/. I decided extract the code and put it here.
 
 # TODO improvements:
 

@@ -50,9 +50,9 @@ class SmsService extends AbstractService
         return $response;
     }
 
-    public function sendTelemedicine(string  $to, string $link): TwwResponse
+    public function sendPhoneNumberConfirmation(string  $to, string $link): TwwResponse
     {
-        $message = "Doctor is waiting for you online: {$link}";
+        $message = "Confirm your mobile number clicking here: {$link}";
 
         $sms = new TwwSMS(TwwSms::DEFAULT_FROM, $to, $message);
 

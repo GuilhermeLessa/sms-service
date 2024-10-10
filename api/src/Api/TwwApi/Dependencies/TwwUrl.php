@@ -17,8 +17,6 @@ class TwwUrl
 
     private function validateUrl(string $url): string
     {
-        //TODO: validate if is an valid url format
-
         if (empty($url) || !is_string($url)) {
             throw new Exception('Invalid url.');
         }

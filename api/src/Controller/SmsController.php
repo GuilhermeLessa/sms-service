@@ -33,7 +33,7 @@ class SmsController extends AbstractRestController
     }
 
     /**
-     * @Rest\Post("/send", name="_enviar")
+     * @Rest\Post("/send", name="_send")
      */
     public function send(Request $request): JsonResponse
     {

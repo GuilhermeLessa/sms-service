@@ -34,7 +34,7 @@
 			"response": []
 		},
 		{
-			"name": "[PEP]/sms/enviar",
+			"name": "[PEP]/sms/send",
 			"request": {
 				"auth": {
 					"type": "bearer",

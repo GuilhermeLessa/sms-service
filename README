@@ -5,7 +5,7 @@ Its only an example implementation of a sms sender that I've created in an legac
 
        Implement automated test cases
        Separate abstractions of TwwRequest and TwwResponse
-       
+       Validate TwwUrl is an valid url format
 
 
 

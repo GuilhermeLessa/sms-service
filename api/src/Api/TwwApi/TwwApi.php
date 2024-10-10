@@ -54,7 +54,7 @@ class TwwApi
             return new TwwResponse($status, ["message" => $message]);
         }
 
-        $message = $message ? $message : "SMS Fail.";
+        $message = $message ? $message : "SMS Fail";
 
         throw new Exception($message);
     }

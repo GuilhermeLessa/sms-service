@@ -26,12 +26,12 @@ class TwwSms
     private function validateFrom(string $from): string
     {
         if (empty($from) || !is_string($from)) {
-            throw new Exception('Invalid from.');
+            throw new Exception('Invalid from');
         }
 
         $from = preg_replace('/\D/', '', $from);
         if (strlen($from) == 0) {
-            throw new Exception('Invalid from.');
+            throw new Exception('Invalid from');
         }
 
         return $from;
@@ -40,12 +40,12 @@ class TwwSms
     private function validateTo(string $to): string
     {
         if (empty($to) || !is_string($to)) {
-            throw new Exception('Invalid to.');
+            throw new Exception('Invalid to');
         }
 
         $to = preg_replace('/\D/', '', $to);
         if (!(strlen($to) == 12 || strlen($to) == 13)) {
-            throw new Exception('Invalid to.');
+            throw new Exception('Invalid to');
         }
 
         return $to;
@@ -54,12 +54,12 @@ class TwwSms
     private function validateMessage(string $message): string
     {
         if (empty($message) || !is_string($message)) {
-            throw new Exception('Invalid message.');
+            throw new Exception('Invalid message');
         }
 
         $message = trim($message);
         if (strlen($message) == 0) {
-            throw new Exception('Invalid message.');
+            throw new Exception('Invalid message');
         }
 
         return $message;

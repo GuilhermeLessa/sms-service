@@ -43,7 +43,7 @@ class SmsServiceParams
     {
         $url = $this->paramsRepository->getParam("SMS_URL");
         if (!$url) {
-            throw new Exception("SmsService param not found: SMS_URL.");
+            throw new Exception("SmsService param not found: SMS_URL");
         }
         return $url->getValor();
     }
@@ -52,7 +52,7 @@ class SmsServiceParams
     {
         $user = $this->paramsRepository->getParam("SMS_USERNAME");
         if (!$user) {
-            throw new Exception("SmsService param not found: SMS_USERNAME.");
+            throw new Exception("SmsService param not found: SMS_USERNAME");
         }
         return $user->getValor();
     }
@@ -61,7 +61,7 @@ class SmsServiceParams
     {
         $pass = $this->paramsRepository->getParam("SMS_PASSWORD");
         if (!$pass) {
-            throw new Exception("SmsService param not found: SMS_PASSWORD.");
+            throw new Exception("SmsService param not found: SMS_PASSWORD");
         }
         return $pass->getValor();
     }

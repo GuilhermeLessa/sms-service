@@ -40,22 +40,22 @@ class SmsController extends AbstractRestController
         try {
             $to = $request->get('to');
             if (empty($to) || !is_string($to)) {
-                throw new Exception('Invalid to.');
+                throw new Exception('Invalid to');
             }
 
             $to = preg_replace('/\D/', '', $to);
             if (!(strlen($to) == 12 || strlen($to) == 13)) {
-                throw new Exception('Invalid to.');
+                throw new Exception('Invalid to');
             }
 
             $message = $request->get('message');
             if (empty($message) || !is_string($message)) {
-                throw new Exception('Invalid message.');
+                throw new Exception('Invalid message');
             }
 
             $message = trim($message);
             if (strlen($message) == 0) {
-                throw new Exception('Invalid message.');
+                throw new Exception('Invalid message');
             }
 
             /** @var TwwResponse $response */

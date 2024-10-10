@@ -52,7 +52,7 @@ class SmsService extends AbstractService
 
     public function sendPhoneNumberConfirmation(string  $to, string $link): TwwResponse
     {
-        $message = "Confirm your mobile number clicking here: {$link}";
+        $message = "Confirm your mobile phone number clicking here: {$link}";
 
         $sms = new TwwSMS(TwwSms::DEFAULT_FROM, $to, $message);
 

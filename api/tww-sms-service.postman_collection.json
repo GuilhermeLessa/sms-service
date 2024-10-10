@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "5b893956-2e5c-4474-a0d2-a95d500a51bb",
+		"name": "tww-sms-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19444354"
+	},
+	"item": [
+		{
+			"name": "[TWW]/EnviaSMS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"NumUsu\": \"{{USUARIO}}\",\n    \"Senha\": \"{{SENHA}}\",\n    \"SeuNum\": \"{{SEU_NUMERO}}\",\n    \"Celular\": \"5547991262818\",\n    \"Mensagem\": \"hello world\"\n}"
+				},
+				"url": {
+					"raw": "{{SECONDARY_URL}}/EnviaSMS",
+					"host": [
+						"{{SECONDARY_URL}}"
+					],
+					"path": [
+						"EnviaSMS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[PEP]/sms/enviar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{PEP_BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"to\": \"5547991112212\",\n    \"message\": \"Hello World\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api/app/sms/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"app",
+						"sms",
+						"send"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "USUARIO",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "SENHA",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "SEU_NUMERO",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "PRIMARY_URL",
+			"value": "https://webservices2.twwwireless.com.br",
+			"type": "string"
+		},
+		{
+			"key": "SECONDARY_URL",
+			"value": "https://webservices2.twwwireless.com.br/reluzcap/wsreluzcap.asmx",
+			"type": "string"
+		},
+		{
+			"key": "PEP_BEARER_TOKEN",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

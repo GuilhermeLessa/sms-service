@@ -1,0 +1,117 @@
+
+Its only an example implementation of a sms sender that I've created in an legacy project. It was used Symfony framework and consumed a Brazilian web service http://twwwireless.com.br/. I decided extract the code and put it here.
+
+# TODO improvements:
+
+       Implement automated test cases
+       Separate abstractions of TwwRequest and TwwResponse
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------
+
+# Useful instructions
+
+       How to install docker on linux:
+
+              https://docs.docker.com/engine/install/ubuntu/
+
+      
+       How to attach on container bash:
+
+              docker exec -it weather-php bash
+
+       How run test cases:
+
+              docker exec weather-php php artisan test
+
+              docker exec weather-php php artisan test --coverage-html=coverage
+
+
+       Steps to install laravel sanctum:
+
+              docker exec weather-php composer create-project laravel/laravel .
+
+              docker exec weather-php php artisan install:api
+
+              docker exec weather-php composer update
+
+              docker exec weather-php php artisan migrate
+
+              docker exec weather-php php artisan db:seed
+
+
+       How manipulate resources on laravel:
+
+              docker exec weather-php php artisan make:controller WeatherController
+
+              docker exec weather-php php artisan make:migration create_forecast_table
+
+              docker exec weather-php php artisan make:model Forecast
+
+              docker exec weather-php php artisan migrate:rollback --step=1
+
+              docker exec weather-php php artisan migrate:reset

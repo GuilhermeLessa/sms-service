@@ -6,7 +6,8 @@ Its only a simple sms sender that I've created in an legacy project. It was used
        Implement automated test cases
        Separate abstractions of TwwRequest and TwwResponse
        Validate TwwUrl is a valid url format
-
+       Separate a new layer of message templates
+       Bind params on message templates
 
 
 
